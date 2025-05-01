@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Digit-Ivoire">
+  <link rel="shortcut icon" href="/img/ivory.jpeg">
+
+  <meta name="description" content="Digit-Ivoire - Obtenez vos documents officiels en quelques clics" />
+  <meta name="keywords" content="documents officiels, Côte d'Ivoire, services administratifs" />
+
+  <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Digit-Ivoire Accueil</title>
+
+  <style>
+    /* Styles personnalisés */
+    .hero {
+      padding: 80px 0;
+      background-color: #3b5d50;
+    }
+
+    #entete{
+        background-color: #3b5d50;
+    }
+    #entete span{
+        color: #7f8d88;;
+    }
+
+    .hero-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature {
+      padding: 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature .icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e9ecef;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .testimonial-block {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .author-pic img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+   
+    .post-entry {
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .post-entry:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-thumbnail img {
+      border-radius: 10px;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .footer-section {
+      background-color: #3b5d50;
+      color: white;
+      padding: 80px 0 20px;
+    }
+
+    .subscription-form {
+      background-color: #2c3237;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+     form-control{
+    outline: none;        /* Supprime la bordure bleue interne */
+    box-shadow: none;     /* Supprime l'ombre bleue externe */
+    border-color: inherit; /* Optionnel : garde la bordure normale */
+}
+
+    .custom-social a {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-right: 10px;
+      color: rgb(5, 3, 3);
+      transition: all 0.3s ease;
+    }
+
+    .custom-social a:hover {
+      background-color: #ffc107;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 40px 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .feature {
+        margin-bottom: 30px;
+      }
+
+      .subscription-form {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="entete">
+    <div class="container">
+      <a class="navbar-brand fw-bold"  href="index.html">
+        Digit-<span class="fw-bold">Ivoire</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse fw-bold" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/apropos.html">A propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contacts.html">Contacts</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link" href="pages/connexion.html"><i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero text-white" >
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <h1 class="display-4 fw-bold mb-4">
+            Vos documents officiels, <span class="d-block">en quelques clics !</span>
+          </h1>
+          <p class="lead mb-4">
+            Rejoignez-nous dès maintenant en créant votre compte ou en vous connectant pour profiter de tous les services.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="pages/connexion.html" class="btn btn-dark">Connexion</a>
+            <a href="pages/inscription.html" class="btn btn-warning">Inscription</a>
+          </div>
+        </div>
+        <div class="col-lg-7 ps-5">
+          <div class="hero-img-wrap">
+            <img src="img/joliebg.png" alt="Hero image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <div class="why-choose-section py-5">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-6">
+          <h2 class="h1 mb-4">Pourquoi nous choisir ?</h2>
+          <p class="lead mb-5">Notre plateforme vous offre une solution rapide, sécurisée et fiable pour obtenir vos documents officiels.</p>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="img/folder.png" alt="Livraison" class="img-fluid">
+                </div>
+                <h3 class="h5">Livraison rapide</h3>
+                <p>Service de livraison express pour vos documents urgents.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="img/google-docs.png" alt="Documents" class="img-fluid" style="width: 40px;">
+                </div>
+                <h3 class="h5">Documents vérifiés</h3>
+                <p>Tous nos documents sont authentifiés et sécurisés.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="img/customer-support.png" alt="Support" class="img-fluid">
+                </div>
+                <h3 class="h5">Support 24/7</h3>
+                <p>Une équipe disponible pour vous assister à tout moment.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="img/need.png" alt="Demande" class="img-fluid" style="width: 50px;">
+                </div>
+                <h3 class="h5">Suivi simplifié</h3>
+                <p>Suivez l'état de vos demandes en temps réel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-5 mt-lg-0">
+          <div class="img-wrap">
+            <img src="img/ivory.jpeg" alt="Côte d'Ivoire" class="img-fluid rounded-3 shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+<div class="testimonial-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center h1 mb-5">Témoignages</h2>
+  
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <!-- Témoignage 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-block text-center">
+              <p class="lead mb-4">
+                "Je suis tellement heureuse ! J'avais fait ma demande d'état civil en ligne, et en quelques jours seulement, j'ai reçu mon extrait de naissance directement en format PDF."
+              </p>
+              <div class="author-info">
+                <img src="img/person-1.png" alt="Fatou Coulibaly" class="mb-3 rounded-circle" width="80" height="80">
+                <h3 class="h5">Fatou Coulibaly</h3>
+                <div class="text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Témoignage 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-block text-center">
+              <p class="lead mb-4">
+                "Un service exceptionnel ! Rapide, clair et efficace. Je recommande vivement."
+              </p>
+              <div class="author-info">
+                <img src="img/person_2.jpg" alt="Jean Koffi" class="mb-3 rounded-circle" width="80" height="80">
+                <h3 class="h5">Jean Koffi</h3>
+                <div class="text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Témoignage 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-block text-center">
+              <p class="lead mb-4">
+                "Grâce à votre plateforme, j'ai économisé du temps et de l'argent. Bravo pour cette belle initiative !"
+              </p>
+              <div class="author-info">
+                <img src="img/person_4.jpg" alt="Awa Traoré" class="mb-3 rounded-circle" width="80" height="80">
+                <h3 class="h5">Awa Traoré</h3>
+                <div class="text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Contrôles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+  
+    </div>
+  </div>
+  
+
+  <!-- Start Blog Section -->
+  <div class="blog-section">
+    <div class="container">
+        <h1 class="mb-5">Demander un acte</h1>
+        <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="post-entry">
+                    <a href="pages/connexion.html" class="post-thumbnail"><img src="img/doc (3).jpeg" alt="Image" class="img-fluid"></a>
+                    <div class="post-content-entry">
+                        <h3><a href="pages/connexion.html">Extrait de naissance</a></h3>
+                        <div class="meta">
+                            <span>Notes <a href="#"></a></span>
+                            <span>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                
+                            
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="post-entry">
+                    <a href="pages/connexion.html" class="post-thumbnail"><img src="img/doc.jpeg" alt="Image" class="img-fluid"></a>
+                    <div class="post-content-entry">
+                        <h3><a href="pages/connexion.html">Acte de mariage</a></h3>
+                        <div class="meta">
+                            <span>Notes <a href="#"></a></span>
+                            <span>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                
+                            
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="post-entry">
+                    <a href="pages/connexion.html" class="post-thumbnail"><img src="img/doc4.jpeg" alt="Image" class="img-fluid"></a>
+                    <div class="post-content-entry">
+                        <h3><a href="pages/connexion.html"> Acte de décès</a></h3>
+                        <div class="meta">
+                            <span>Notes <a href="#"></a></span>
+                            <span>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="mb-5">Faire une demande de certificat</h1>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="post-entry">
+                    <a href="pages/connexion.html" class="post-thumbnail"><img src="./img/img1.jpeg" alt="Image" class="img-fluid"></a>
+                    <div class="post-content-entry">
+                        <h3><a href="pages/connexion.html">Certificat de vie</a></h3>
+                        <div class="meta">
+                            <span>Notes <a href="#"></a></span>
+                            <span>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="post-entry">
+                    <a href="pages/connexion.html" class="post-thumbnail"><img src="../img/dossier 1.jpeg" alt="Image" class="img-fluid"></a>
+                    <div class="post-content-entry">
+                        <h3><a href="pages/connexion.html">Certification de résidence</a></h3>
+                        <div class="meta">
+                            <span>Notes <a href="#"></a></span>
+                            <span>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                
+                            
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-5">
+                <div class="post-entry">
+                    <a href="pages/connexion.html" class="post-thumbnail"><img src="img/doc 6.jpeg" alt="Image" class="img-fluid"></a>
+                    <div class="post-content-entry">
+                        <h3><a href="pages/connexion.html">Certification de célibat </a></h3>
+                        <div class="meta">
+                            <span>Notes <a href="#"></a></span>
+                            <span>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Blog Section -->
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+          <div class="subscription-form">
+            <h3 class="text-white mb-4">
+              <i class="fas fa-envelope me-2"></i>
+              Envoyer un message 
+            </h3>
+            <form class="row g-3">
+              <div class="col-sm">
+                <input type="text" id="text" name="text" class="form-control" placeholder="Votre nom">
+              </div>
+              <div class="col-sm">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Votre email">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-warning">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <!-- Colonne 1 : Texte + Réseaux sociaux -->
+        <div class="col-lg-4">
+          <h2 class="h4 text-white mb-4">Contactez-nous !</h2>
+          <p class="text-white-50 mb-4">
+            Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos démarches administratives.
+          </p>
+          <div class="custom-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      
+        <!-- Colonne 2 : Liens de navigation -->
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col-6 col-sm-4">
+              <h3 class="h6 text-white mb-3">Navigation</h3>
+              <ul class="list-unstyled mb-0">
+                <li><a href="pages/apropos.html" class="text-white-50">À propos de nous</a></li>
+                <li><a href="pages/connexion.html" class="text-white-50">Connexion</a></li>
+                <li><a href="pages/contacts.html" class="text-white-50">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-sm-4">
+              <h3 class="h6 text-white mb-3">Support</h3>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="text-white-50">Centre d'aide</a></li>
+                <li><a href="#" class="text-white-50">Chat en direct</a></li>
+                <li><a href="#" class="text-white-50">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-sm-4">
+              <h3 class="h6 text-white mb-3">Légal</h3>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="text-white-50">Conditions d'utilisation</a></li>
+                <li><a href="#" class="text-white-50">Politique de confidentialité</a></li>
+                <li><a href="#" class="text-white-50">Mentions légales</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Colonne 3 : Coordonnées -->
+        <div class="col-lg-3">
+          <h5 class="mb-3 fw-bold text-white">Contact</h5>
+          <p class="mb-2 text-white-50"><i class="fas fa-map-marker-alt me-2"></i> Abidjan, Côte d'Ivoire</p>
+          <p class="mb-2 text-white-50"><i class="fas fa-phone me-2"></i> +225 XX XX XX XX</p>
+          <p class="mb-2 text-white-50"><i class="fas fa-envelope me-2"></i> contact@digit-ivoire.ci</p>
+        </div>
+      </div>
+      
+
+      <div class="border-top border-secondary pt-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="text-white-50 mb-0">
+              Copyright &copy; <script>document.write(new Date().getFullYear());</script> Tous droits réservés &mdash; Digit-Ivoire
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="#" class="text-white-50">Terms &amp; Conditions</a>
+              </li>
+              <li class="list-inline-item ms-3">
+                <a href="#" class="text-white-50">Politique de confidentialité</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
