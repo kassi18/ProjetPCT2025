@@ -38,22 +38,28 @@
              color: white;
              padding: 80px 0 20px;
         }
+        .subscription-form {
+          background-color: #2c3237;
+         padding: 30px;
+          border-radius: 10px;
+          margin-bottom: 40px;
+       }
         .custom-social a {
-      width: 40px;
-      height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      margin-right: 10px;
-      color: rgb(5, 3, 3);
-      transition: all 0.3s ease;
-    }
-    .custom-social a:hover {
-      background-color: #ffc107;
-      transform: translateY(-3px);
-    }
+            width: 40px;
+           height: 40px;
+          display: inline-flex;
+           align-items: center;
+          justify-content: center;
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          margin-right: 10px;
+          color: rgb(5, 3, 3);
+         transition: all 0.3s ease;
+       }
+          .custom-social a:hover {
+         background-color: #ffc107;
+         transform: translateY(-3px);
+       }
 
         .feature-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -383,108 +389,108 @@
     </main>
 
     <!-- Footer -->
-  <footer class="footer-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8 mx-auto">
-          <div class="subscription-form">
-            <h3 class="text-white mb-4">
-              <i class="fas fa-envelope me-2"></i>
-              Envoyer un message 
-            </h3>
-            <form class="row g-3">
-              <div class="col-sm">
-                <input type="text" id="text" name="text" class="form-control" placeholder="Votre nom">
-              </div>
-              <div class="col-sm">
-                <input type="email" id="email" name="email" class="form-control" placeholder="Votre email">
-              </div>
-              <div class="col-auto">
-                <button type="submit" class="btn btn-warning">
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-4 mb-5">
-        <!-- Colonne 1 : Texte + Réseaux sociaux -->
-        <div class="col-lg-4">
-          <h2 class="h4 text-white mb-4">Contactez-nous !</h2>
-          <p class="text-white-50 mb-4">
-            Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos démarches administratives.
-          </p>
-          <div class="custom-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      
-        <!-- Colonne 2 : Liens de navigation -->
-        <div class="col-lg-5">
-          <div class="row">
-            <div class="col-6 col-sm-4">
-              <h3 class="h6 text-white mb-3">Navigation</h3>
-              <ul class="list-unstyled mb-0">
-                <li><a href="pages/apropos.html" class="text-white-50">À propos de nous</a></li>
-                <li><a href="#" class="text-white-50">Services</a></li>
-                <li><a href="#" class="text-white-50">Contact</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4">
-              <h3 class="h6 text-white mb-3">Support</h3>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white-50">Centre d'aide</a></li>
-                <li><a href="#" class="text-white-50">Chat en direct</a></li>
-                <li><a href="#" class="text-white-50">FAQ</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4">
-              <h3 class="h6 text-white mb-3">Légal</h3>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white-50">Conditions d'utilisation</a></li>
-                <li><a href="#" class="text-white-50">Politique de confidentialité</a></li>
-                <li><a href="#" class="text-white-50">Mentions légales</a></li>
-              </ul>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="subscription-form">
+              <h3 class="text-white mb-4">
+                <i class="fas fa-envelope me-2"></i>
+                Envoyer un message 
+              </h3>
+              <form class="row g-3">
+                <div class="col-sm">
+                  <input type="text" id="text" name="text" class="form-control" placeholder="Votre nom">
+                </div>
+                <div class="col-sm">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Votre email">
+                </div>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-warning">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      
-        <!-- Colonne 3 : Coordonnées -->
-        <div class="col-lg-3">
-          <h5 class="mb-3 fw-bold text-white">Contact</h5>
-          <p class="mb-2 text-white-50"><i class="fas fa-map-marker-alt me-2"></i> Abidjan, Côte d'Ivoire</p>
-          <p class="mb-2 text-white-50"><i class="fas fa-phone me-2"></i> +225 XX XX XX XX</p>
-          <p class="mb-2 text-white-50"><i class="fas fa-envelope me-2"></i> contact@digit-ivoire.ci</p>
-        </div>
-      </div>
-      
-
-      <div class="border-top border-secondary pt-4">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="text-white-50 mb-0">
-              Copyright &copy; <script>document.write(new Date().getFullYear());</script> Tous droits réservés &mdash; Digit-Ivoire
+  
+        <div class="row g-4 mb-5">
+          <!-- Colonne 1 : Texte + Réseaux sociaux -->
+          <div class="col-lg-4">
+            <h2 class="h4 text-white mb-4">Contactez-nous !</h2>
+            <p class="text-white-50 mb-4">
+              Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos démarches administratives.
             </p>
+            <div class="custom-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
           </div>
-          <div class="col-md-6 text-center text-md-end">
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a href="#" class="text-white-50">Terms &amp; Conditions</a>
-              </li>
-              <li class="list-inline-item ms-3">
-                <a href="#" class="text-white-50">Politique de confidentialité</a>
-              </li>
-            </ul>
+        
+          <!-- Colonne 2 : Liens de navigation -->
+          <div class="col-lg-5">
+            <div class="row">
+              <div class="col-6 col-sm-4">
+                <h3 class="h6 text-white mb-3">Navigation</h3>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="pages/apropos.html" class="text-white-50">À propos de nous</a></li>
+                  <li><a href="pages/connexion.html" class="text-white-50">Connexion</a></li>
+                  <li><a href="pages/contacts.html" class="text-white-50">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-sm-4">
+                <h3 class="h6 text-white mb-3">Support</h3>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="#" class="text-white-50">Centre d'aide</a></li>
+                  <li><a href="#" class="text-white-50">Chat en direct</a></li>
+                  <li><a href="#" class="text-white-50">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-sm-4">
+                <h3 class="h6 text-white mb-3">Légal</h3>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="#" class="text-white-50">Conditions d'utilisation</a></li>
+                  <li><a href="#" class="text-white-50">Politique de confidentialité</a></li>
+                  <li><a href="#" class="text-white-50">Mentions légales</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Colonne 3 : Coordonnées -->
+          <div class="col-lg-3">
+            <h5 class="mb-3 fw-bold text-white">Contact</h5>
+            <p class="mb-2 text-white-50"><i class="fas fa-map-marker-alt me-2"></i> Abidjan, Côte d'Ivoire</p>
+            <p class="mb-2 text-white-50"><i class="fas fa-phone me-2"></i> +225 XX XX XX XX</p>
+            <p class="mb-2 text-white-50"><i class="fas fa-envelope me-2"></i> contact@digit-ivoire.ci</p>
+          </div>
+        </div>
+        
+  
+        <div class="border-top border-secondary pt-4">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="text-white-50 mb-0">
+                Copyright &copy; <script>document.write(new Date().getFullYear());</script> Tous droits réservés &mdash; Digit-Ivoire
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a href="#" class="text-white-50">Terms &amp; Conditions</a>
+                </li>
+                <li class="list-inline-item ms-3">
+                  <a href="#" class="text-white-50">Politique de confidentialité</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
