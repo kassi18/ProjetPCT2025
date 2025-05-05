@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Digit-Ivoire" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Digit-Ivoire">
   <link rel="shortcut icon" href="/img/ivory.jpeg">
+
   <meta name="description" content="Digit-Ivoire - Obtenez vos documents officiels en quelques clics" />
   <meta name="keywords" content="documents officiels, Côte d'Ivoire, services administratifs" />
-  <title>Demande d'acte de naissance</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Digit-Ivoire | Demande d'acte </title>
 
   <style>
     :root {
       --primary-color: #3b5d50;
       --secondary-color: #7f8d88;
+      --accent-color: #ffc107;
     }
 
     body {
@@ -26,42 +29,196 @@
 
     .navbar {
       background-color: var(--primary-color);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .navbar-brand span {
       color: var(--secondary-color);
     }
 
-    h3.h5 {
+    .navbar-nav .nav-link {
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--secondary-color);
+    }
+
+    .section-title {
       border-left: 4px solid var(--primary-color);
       padding-left: 10px;
+      font-weight: 600;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-section {
+      position: relative;
+      background-color: var(--primary-color);
+      color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.25rem rgba(59, 93, 80, 0.25);
+    }
+
+    .form-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-section {
+      padding: 2rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover, .btn-primary:focus {
+      background-color: #2c4a3e;
+      border-color: #2c4a3e;
+      transform: translateY(-2px);
     }
 
     .footer-section {
       background-color: #000;
-      padding: 60px 0 20px;
+      padding: 3rem 0 1rem;
+      color: white;
     }
 
-    .custom-social a {
+    .footer-title {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .social-icons a {
       width: 40px;
       height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
       margin-right: 10px;
       color: white;
       transition: all 0.3s ease;
     }
 
-    .custom-social a:hover {
-      background-color: #ffc107;
+    .social-icons a:hover {
+      background-color: var(--accent-color);
       transform: translateY(-3px);
     }
 
-    .form-section {
-      padding: 40px 0;
+    .contact-info {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info .icon {
+      margin-right: 10px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .success-icon {
+      font-size: 5rem;
+      color: #28a745;
+      margin-bottom: 1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-section {
+        text-align: center;
+        padding: 3rem 1rem;
+      }
+      
+      .feature-item {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -70,132 +227,257 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Digit-<span>Ivoire</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse fw-bold" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i></a></li>
-        </ul>
-      </div>
+        <a class="navbar-brand fw-bold">
+            Digit-<span>Ivoire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/support">messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/conatct_profil.html">Contact</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="/profile">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- Formulaire -->
-  <section class="form-section">
-    <div class="container">
-      <form action="traitement.php" method="post" enctype="multipart/form-data">
-        <div class="row g-4">
-          <div class="col-12">
-            <h3 class="h5 mb-3">Informations Personnelles</h3>
-            <div class="row g-3">
-              <div class="col-md-6"><label class="form-label">Nom</label><input type="text" class="form-control" name="lastName" required></div>
-              <div class="col-md-6"><label class="form-label">Prénoms</label><input type="text" class="form-control" name="firstName" required></div>
-              <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" name="email" required></div>
-              <div class="col-md-6"><label class="form-label">Téléphone</label><input type="tel" class="form-control" name="phone" required></div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <h3 class="h5 mb-3">Informations de Naissance</h3>
-            <div class="row g-3">
-              <div class="col-md-6"><label class="form-label">Date de Naissance</label><input type="date" class="form-control" name="dateOfBirth" required></div>
-              <div class="col-md-6"><label class="form-label">Lieu de Naissance</label><input type="text" class="form-control" name="placeOfBirth" required></div>
-              <div class="col-md-6"><label class="form-label">Sous Préfecture (S/P)</label>
-                <select class="form-select" name="gender" required>
-                  <option value="">Sélectionnez...</option>
-                  <option value="M">Masculin</option>
-                  <option value="F">Féminin</option>
-                </select>
+  <!-- Main Content -->
+  <div class="container main-container py-4">
+    <h1 class="text-center mb-4 fade-in">Demande d'Acte Extrait de Naissance</h1>
+    
+    <div class="form-container fade-in">
+      <div class="row g-0">
+        <!-- Left Side - Image and Text -->
+        <div class="col-md-5">
+          <div class="hero-section h-100">
+            <img src="../img/signature.jpg" alt="Documents officiels" class="hero-img">
+            <div class="hero-content">
+              <h2 class="mb-4">Obtenez vos documents officiels</h2>
+              <p class="mb-4">Simplifiez vos démarches administratives en effectuant votre demande en ligne.</p>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <span>Rapide et sécurisé</span>
               </div>
-              <div class="col-md-6"><label class="form-label">Nom complet du Père</label><input type="text" class="form-control" name="fatherName" required></div>
-              <div class="col-md-6"><label class="form-label">Nom complet de la Mère</label><input type="text" class="form-control" name="motherName" required></div>
-              <div class="col-md-6"><label class="form-label">Genre</label>
-                <select class="form-select" name="gender" required>
-                  <option value="">Sélectionnez...</option>
-                  <option value="M">Masculin</option>
-                  <option value="F">Féminin</option>
-                </select>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <span>Traitement prioritaire</span>
               </div>
-              <div class="col-md-6"><label class="form-label">N° du registre</label><input type="number" class="form-control" name="register" required></div>
-              <div class="col-md-6"><label class="form-label">telecharger une copie d'extrait(pour la vérification)</label><input type="file" class="form-control" name="idBack" required></div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <h3 class="h5 mb-3">Détails de la Demande</h3>
-            <div class="row g-3">
-              <div class="col-md-6"><label class="form-label">Motif de la Demande</label>
-                <select class="form-select" name="purpose" required>
-                  <option value="">Sélectionnez...</option>
-                  <option value="administrative">Usage Administratif</option>
-                  <option value="school">Inscription Scolaire</option>
-                  <option value="employment">Emploi</option>
-                  <option value="other">Autre</option>
-                </select>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <span>Support client disponible</span>
               </div>
-              <div class="col-md-6"><label class="form-label">Nombre de Copies</label>
-                <select class="form-select" name="copies" required>
-                  <option value="1">1</option><option value="2">2</option>
-                  <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-                </select>
-              </div>
-              <div class="col-md-6"><label class="form-label">Pièce d'identité (recto)</label><input type="file" class="form-control" name="idFront" required></div>
-              <div class="col-md-6"><label class="form-label">Pièce d'identité (verso)</label><input type="file" class="form-control" name="idBack" required></div>
             </div>
-          </div>
-
-          <div class="col-12">
-            <div class="form-check mb-3 mt-3">
-              <input class="form-check-input" type="checkbox" id="terms" required>
-              <label class="form-check-label" for="terms">Je certifie que les informations fournies sont exactes</label>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Soumettre la Demande</button>
           </div>
         </div>
-      </form>
+        
+        <!-- Right Side - Form -->
+        <div class="col-md-7">
+          <div class="form-section">
+            <!-- Success Message (initially hidden) -->
+            <div id="successMessage" class="success-message">
+              <i class="fas fa-check-circle success-icon"></i>
+              <h3 class="mb-3">Demande Envoyée !</h3>
+              <p class="text-muted">Votre demande a été soumise avec succès. Vous recevrez bientôt un email de confirmation.</p>
+            </div>
+            
+            <!-- Form Content -->
+            <form id="birthCertForm">
+              <!-- Personal Information -->
+              <div class="mb-4">
+                <h3 class="section-title mb-3">Informations Personnelles</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control" name="lastName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Prénoms</label>
+                    <input type="text" class="form-control" name="firstName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Téléphone</label>
+                    <input type="tel" class="form-control" name="phone" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Birth Information -->
+              <div class="mb-4">
+                <h3 class="section-title mb-3">Informations de Naissance</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Date de Naissance</label>
+                    <input type="date" class="form-control" name="dateOfBirth" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Lieu de Naissance</label>
+                    <input type="text" class="form-control" name="placeOfBirth" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Sous Préfecture (S/P)</label>
+                    <input type="text" class="form-control" name="subPrefecture" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Genre</label>
+                    <select class="form-select" name="gender" required>
+                      <option value="">Sélectionnez...</option>
+                      <option value="M">Masculin</option>
+                      <option value="F">Féminin</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Nom complet du Père</label>
+                    <input type="text" class="form-control" name="fatherName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Nom complet de la Mère</label>
+                    <input type="text" class="form-control" name="motherName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">N° du registre</label>
+                    <input type="number" class="form-control" name="registerNumber" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Request Details -->
+              <div class="mb-4">
+                <h3 class="section-title mb-3">Détails de la Demande</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Motif de la Demande</label>
+                    <select class="form-select" name="purpose" required>
+                      <option value="">Sélectionnez...</option>
+                      <option value="administrative">Usage Administratif</option>
+                      <option value="school">Inscription Scolaire</option>
+                      <option value="employment">Emploi</option>
+                      <option value="other">Autre</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Nombre de Copies</label>
+                    <select class="form-select" name="copies" required>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Pièce d'identité (recto)</label>
+                    <input type="file" class="form-control" name="idFront" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Pièce d'identité (verso)</label>
+                    <input type="file" class="form-control" name="idBack" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Copie d'extrait de naissance (pour vérification)</label>
+                    <input type="file" class="form-control" name="birthCopy" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms and Submit -->
+              <div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="terms" required>
+                  <label class="form-check-label" for="terms">
+                    Je certifie que les informations fournies sont exactes
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2">Soumettre la Demande</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer class="footer-section">
     <div class="container">
-      <div class="row g-4 mb-4">
-        <div class="col-lg-4 text-white">
-          <h4>Contactez-nous !</h4>
-          <p>Notre équipe est à votre disposition pour toute demande.</p>
-          <div class="custom-social">
+      <div class="row mb-4">
+        <div class="col-lg-4">
+          <h4 class="footer-title">Contactez-nous !</h4>
+          <p class="text-white-50 mb-4">Notre équipe est à votre disposition pour toute demande.</p>
+          <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-        <div class="col-lg-5 text-white-50">
+        <div class="col-lg-5">
           <div class="row">
-            <div class="col-6 col-sm-4">
-              <h6 class="text-white">Navigation</h6>
-              <ul class="list-unstyled"><li><a href="#" class="text-white-50">À propos</a></li></ul>
+            <div class="col-sm-4">
+              <h6 class="footer-title">Navigation</h6>
+              <ul class="footer-links">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+              </ul>
             </div>
-            <div class="col-6 col-sm-4">
-              <h6 class="text-white">Support</h6>
-              <ul class="list-unstyled"><li><a href="#" class="text-white-50">Centre d’aide</a></li></ul>
+            <div class="col-sm-4">
+              <h6 class="footer-title">Support</h6>
+              <ul class="footer-links">
+                <li><a href="#">Centre d'aide</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
             </div>
-            <div class="col-6 col-sm-4">
-              <h6 class="text-white">Légal</h6>
-              <ul class="list-unstyled"><li><a href="#" class="text-white-50">Mentions légales</a></li></ul>
+            <div class="col-sm-4">
+              <h6 class="footer-title">Légal</h6>
+              <ul class="footer-links">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">CGU</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 text-white-50">
-          <h6 class="text-white">Contact</h6>
-          <p><i class="fas fa-map-marker-alt me-2"></i> Abidjan, Côte d'Ivoire</p>
-          <p><i class="fas fa-phone me-2"></i> +225 XX XX XX XX</p>
-          <p><i class="fas fa-envelope me-2"></i> contact@digit-ivoire.ci</p>
+        <div class="col-lg-3">
+          <h6 class="footer-title">Contact</h6>
+          <div class="contact-info">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>Abidjan, Côte d'Ivoire</div>
+          </div>
+          <div class="contact-info">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div>+225 XX XX XX XX</div>
+          </div>
+          <div class="contact-info">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>contact@digit-ivoire.ci</div>
+          </div>
         </div>
       </div>
       <div class="text-center text-white-50 border-top pt-3">
@@ -205,5 +487,33 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Form submission handling
+    document.getElementById('birthCertForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Hide form and show success message
+      this.style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+      
+      // Simulate form submission
+      console.log('Form submitted!');
+      
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        this.reset();
+        this.style.display = 'block';
+        document.getElementById('successMessage').style.display = 'none';
+      }, 5000);
+    });
+
+    // Add fade-in animation to form elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.form-container, h1');
+      elements.forEach(el => {
+        el.classList.add('fade-in');
+      });
+    });
+  </script>
 </body>
 </html>
